@@ -32,23 +32,6 @@ describe('AppController', () => {
 
       expect(appController.getAllSuperHeros()).toEqual(mockSuperHeros);
     });
-    it('should return an array of SuperHeros', () => {
-      const mockSuperHeros = [
-        { id: 1, name: 'Superman', superPower: 'Flight', humilityScore: 9 },
-        {
-          id: 2,
-          name: 'Batman',
-          superPower: 'Martial Arts',
-          humilityScore: 22,
-        },
-      ];
-
-      jest
-        .spyOn(appController, 'getAllSuperHeros')
-        .mockReturnValue(mockSuperHeros);
-
-      expect(appController.getAllSuperHeros()).toEqual(mockSuperHeros);
-    });
 
     it('should create and return superHero ', () => {
       const superHero = {
